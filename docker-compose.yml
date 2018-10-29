@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  lazyimgservice.core:
+    image: lazyimgservice.core
+    ports:
+     - "5000:5000"
+    build:
+      context: ./lazyimgservice.core
+      dockerfile: Dockerfile
+    volumes:
+      - /c/dev/lazyimgservice.core/lazyimgservice.core/wwwroot/filestorage:/wwwroot/filestorage  
+      - /c/dev/lazyimgservice.core/lazyimgservice.core/db:/db  
